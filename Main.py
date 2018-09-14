@@ -1,3 +1,11 @@
+#Yamel Hernandez
+#80590552
+#CS 2302
+#Diego Aguirre
+#Lab 1
+#Purpose of this lab was to understand recursion & 
+#how to implement it using machine learning in ver A
+
 import os
 import random
 
@@ -26,18 +34,18 @@ def process_dir(path):
 
     #my code
     for fPath in file_list:
-        if classify_pic(fPath) > .5:
+        if classify_pic(fPath) > .5: #seperates the pictures & adds to proper array
             dog_list.append(fPath)
         else:
             cat_list.append(fPath)
     
-    if not dir_list:
+    if not dir_list: 
         #print("in the thing")
         return cat_list, dog_list
     
     for dL in dir_list:
-        print(str(path+"/"+dL))
-        cl, dl = process_dir(str(path+"/"+dL))
+        print(str(path+"/"+dL)) #prints path
+        cl, dl = process_dir(str(path+"/"+dL))#processes the path again and etends the lists
         cat_list.extend(cl)
         dog_list.extend(dl)
 
