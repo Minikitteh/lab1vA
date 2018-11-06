@@ -127,7 +127,6 @@ def main():
                     dictionary[password] = 1
                 if not check1(temp, password):
                     x = Node(password, 1, x)
-
     except:
         pass
     
